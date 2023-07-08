@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family:  'Lobster Two', 'Inter', 'Dancing Script',  sans-serif, cursive;
+}
