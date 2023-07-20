@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    font-family:  'Lobster Two', 'Inter', 'Dancing Script',  sans-serif, cursive;
+    font-family: 'Lobster Two','Dancing Script', 'Inter',  sans-serif, cursive;
 }
