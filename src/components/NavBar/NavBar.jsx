@@ -1,12 +1,10 @@
-import React from 'react'
+import "@fontsource/poppins";
 
 const NavBar = () => {
   return (
-    <div className='fixed top-0 left-0 h-[9vh] bg-black w-full items-center flex flex-col  text-white'>
-      <p className=' justify-center text-center items-center h-full text-5xl font-bold border-b-2'>
-        English - Spanish - Cards
-      </p>
-      <p className='text-xl font-thin'>Click en una tarjeta para ver la respuesta correcta</p>
+    <div className='pt-7 pb-2 w-full flex flex-col text-white'>
+      <p className='text-4xl font-bold text-center'>Flipped-Cards</p>
+      <p className='text-lg text-center'>Has click en una tarjeta para ver la respuesta correcta</p>
     </div>
   )
 }

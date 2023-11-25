@@ -1,26 +1,25 @@
 import Card from '../Card/Card'
-import React, { useState } from 'react';
-import { questions } from '../data/questions';
+// import { useState } from 'react';
+import { questions as questionsArr } from '../data/questions';
 const CardContainer = () => {
 
-  const [isFlipped, setIsFlipped] = useState(true);
-  
-  const randomCompare = () => Math.random() - 0.5;
-  questions.sort(randomCompare)
+  // const [isFlipped, setIsFlipped] = useState(true);
 
-  const questions2 = questions.slice(0,20)
+  const randomCompare = () => Math.random() - 0.5;
+  questionsArr.sort(randomCompare)
+
+  const questions = questionsArr.slice(0, 20)
 
   return (
-    <div className='flex items-center justify-center min-h-full w-screen overflow-hidden mt-[10vh] mb-[10vh]'>
-      <div className='grid xm:sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-14 gap-y-2 h-[80vh] mt-4'>
-        {questions2.map((word) => (
-          <Card
-            key={word.question}
-            word={word}          
-          />
-        ))
-        }
-      </div>
+    <div className='pt-4 h-full min-w-screen flex flex-wrap gap-5 px-2 justify-center'
+    >
+      {questions.map((word) => (
+        <Card
+          key={word.question}
+          word={word}
+        />
+      ))
+      }
     </div>
   )
 }

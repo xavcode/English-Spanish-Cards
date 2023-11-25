@@ -1,49 +1,47 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CardFlip from 'react-card-flip';
 import { startCase } from 'lodash';
 const Card = ({ word }) => {
 
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const validations = () => {
-
-  }
-
   const handleClick = () => {
     setIsFlipped(!isFlipped);
   };
 
-
   return (
-    <CardFlip isFlipped={isFlipped} flipDirection="vertical" flipSpeedBackToFront='0.75' flipSpeedFrontToBack='0.75' containerStyle={{ 
-    cursor: 'pointer' }}>
-      <div
-        className="bg-sky-950/90 flex items-center justify-center border border-solid border-neutral-950 w-60 h-[130px] rounded-2xl shadow-inner shadow-zinc-600 "
-        onClick={handleClick}
+    <div className='hover:scale-105 transition duration-100 hover:duration-200 cursor-pointer hover:brightness-125'>
+      <CardFlip isFlipped={isFlipped} flipDirection="horizontal" flipSpeedBackToFront='0.8' flipSpeedFrontToBack='0.8'
       >
-        <div className='flex flex-col'>
-          <div className='flex justify-center mb-2'>
-            <p className=' border-b text-3xl text-white'>{startCase(word.question)}</p>
+        <div className='w-60 h-52 bg-neutral-800/90 flex items-center justify-center border border-solid border-neutral-950 rounded-2xl shadow-lg shadow-slate-400/40 '
+          onClick={handleClick}
+        >
+          <div className='flex flex-col items-center justify-center'>
+            <div className='flex justify-center mb-2'>
+              <p className=' border-b text-2xl text-white uppercase'>{startCase(word.question)}</p>
+            </div>
+            <ul className='flex flex-col text-center gap-1 w-36'>
+              <div className='flex flex-col'>
+                {
+                  word.options.map(option => (
+                    <li key={option} className='flex justify-between'>
+                      <input type="checkbox" />
+                      <span className="text-xl text-white font-bold">{startCase(option)}</span>
+
+                    </li>
+                  ))
+                }
+              </div>
+            </ul>
           </div>
-          <ul className='grid grid-cols-2 gap-x-6 text-center'>
-            {
-              word.options.map(option => (
-                <li key={option}>
-                  <p className=" block text-2xl text-white ">{startCase(option)}</p>
-                </li>
-              )
-              )
-            }
-          </ul>
         </div>
-      </div>
-      <div
-        className="bg-sky-950/90 flex items-center justify-center border border-solid border-neutral-950 w-60 h-[130px] rounded-2xl"
-        onClick={handleClick}
-      >
-        <p className="text-4xl text-lime-600 uppercase text-center font-bold">{word.response}</p>
-      </div>
-    </CardFlip>
+        <div className=' w-60 h-52 bg-neutral-800/90 flex items-center justify-center border border-solid border-neutral-950 rounded-2xl shadow-lg shadow-slate-400/40'
+          onClick={handleClick}
+        >
+          <p className="text-3xl text-lime-700 uppercase text-center font-bold">{word.response}</p>
+        </div>
+      </CardFlip>
+    </div>
   );
 };
 
