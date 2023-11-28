@@ -1,198 +1,335 @@
-export const questions =
-  [
-    {
-      question: "coche",
-      response: "car",
-      options: ["bed", "car", "dog", "house"]
-    },
-    {
-      question: "libro",
-      response: "book",
-      options: ["book", "window", "cat", "chair"]
-    },
-    {
-      question: "árbol",
-      response: "tree",
-      options: ["table", "door", "tree", "lamp"]
-    },
-    {
-      question: "pluma",
-      response: "pen",
-      options: ["bird", "stairs", "pen", "clock"]
-    },
-    {
-      question: "computadora",
-      response: "computer",
-      options: ["garden", "cup", "television", "computer"]
-    },
-    {
-      question: "gato",
-      response: "cat",
-      options: ["book", "chair", "cat", "window"]
-    },
-    {
-      question: "casa",
-      response: "house",
-      options: ["tree", "door", "house", "lamp"]
-    },
-
-    {
-      question: "silla",
-      response: "chair",
-      options: ["cat", "book", "chair", "window"]
-    },
-    {
-      question: "cama",
-      response: "bed",
-      options: ["car", "table", "bed", "lamp"]
-    },
-    {
-      question: "puerta",
-      response: "door",
-      options: ["tree", "window", "door", "book"]
-    },
-    {
-      question: "lámpara",
-      response: "lamp",
-      options: ["dog", "car", "lamp", "house"]
-    },
-    {
-      question: "pájaro",
-      response: "bird",
-      options: ["pen", "stairs", "bird", "clock"]
-    },
-    {
-      question: "jardín",
-      response: "garden",
-      options: ["computer", "cup", "garden", "television"]
-    },
-    {
-      question: "taza",
-      response: "cup",
-      options: ["sun", "coffee", "cup", "apple"]
-    },
-    {
-      question: "televisor",
-      response: "television",
-      options: ["moon", "computer", "television", "apple"]
-    },
-    {
-      question: "estantería",
-      response: "bookshelf",
-      options: ["bed", "chair", "window", "bookshelf"]
-    },
-    {
-      question: "flor",
-      response: "flower",
-      options: ["tree", "door", "lamp", "flower"]
-    },
-    {
-      question: "llave",
-      response: "key",
-      options: ["cat", "book", "window", "key"]
-    },
-    {
-      question: "zapatos",
-      response: "shoes",
-      options: ["chair", "bed", "table", "shoes"]
-    },
-    {
-      question: "perro",
-      response: "dog",
-      options: ["cat", "dog", "bird", "rabbit"]
-    },
-    {
-      question: "pelota",
-      response: "ball",
-      options: ["table", "door", "ball", "lamp"]
-    },
-    {
-      question: "plátano",
-      response: "banana",
-      options: ["bird", "stairs", "banana", "clock"]
-    },
-    {
-      question: "ordenador",
-      response: "computer",
-      options: ["garden", "cup", "television", "computer"]
-    },
-    {
-      question: "luna",
-      response: "moon",
-      options: ["sun", "coffee", "moon", "apple"]
-    },
-    {
-      question: "ventilador",
-      response: "fan",
-      options: ["book", "chair", "fan", "window"]
-    },
-    {
-      question: "mesa",
-      response: "table",
-      options: ["cat", "book", "table", "chair"]
-    },
-    {
-      question: "avión",
-      response: "airplane",
-      options: ["car", "airplane", "train", "boat"]
-    },
-    {
-      question: "sol",
-      response: "sun",
-      options: ["moon", "coffee", "sun", "apple"]
-    },
-    {
-      question: "teléfono",
-      response: "phone",
-      options: ["table", "phone", "computer", "lamp"]
-    },
-    {
-      question: "ventana",
-      response: "window",
-      options: ["chair", "bed", "window", "table"]
-    },
-    {
-      question: "libreta",
-      response: "notebook",
-      options: ["bird", "stairs", "notebook", "clock"]
-    },
-
-    {
-      question: "café",
-      response: "coffee",
-      options: ["sun", "coffee", "cup", "apple"]
-    },
-
-    {
-      question: "lápiz",
-      response: "pencil",
-      options: ["chair", "bed", "pencil", "table"]
-    },
-    {
-      question: "reloj",
-      response: "clock",
-      options: ["bird", "stairs", "clock", "pen"]
-    },
-
-    {
-      question: "manzana",
-      response: "apple",
-      options: ["cup", "car", "apple", "book"]
-    },
-
-    {
-      question: "televisión",
-      response: "television",
-      options: ["cat", "book", "window", "television"]
-    },
-    {
-      question: "camisa",
-      response: "shirt",
-      options: ["dog", "bed", "shirt", "house"]
-    }
-  ]
-
-
-
-
-
+export const questions = [
+  {
+    id: 1,
+    question: "coche",
+    response: "car",
+    options: ["bed", "car", "dog", "house"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 2,
+    question: "libro",
+    response: "book",
+    options: ["book", "window", "cat", "chair"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 3,
+    question: "árbol",
+    response: "tree",
+    options: ["table", "door", "tree", "lamp"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 4,
+    question: "pluma",
+    response: "pen",
+    options: ["bird", "stairs", "pen", "clock"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 5,
+    question: "computadora",
+    response: "computer",
+    options: ["garden", "cup", "television", "computer"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 6,
+    question: "gato",
+    response: "cat",
+    options: ["book", "chair", "cat", "window"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 7,
+    question: "casa",
+    response: "house",
+    options: ["tree", "door", "house", "lamp"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 8,
+    question: "silla",
+    response: "chair",
+    options: ["cat", "book", "chair", "window"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 9,
+    question: "cama",
+    response: "bed",
+    options: ["car", "table", "bed", "lamp"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 10,
+    question: "puerta",
+    response: "door",
+    options: ["tree", "window", "door", "book"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 11,
+    question: "lámpara",
+    response: "lamp",
+    options: ["dog", "car", "lamp", "house"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 12,
+    question: "pájaro",
+    response: "bird",
+    options: ["pen", "stairs", "bird", "clock"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 13,
+    question: "jardín",
+    response: "garden",
+    options: ["computer", "cup", "garden", "television"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 14,
+    question: "taza",
+    response: "cup",
+    options: ["sun", "coffee", "cup", "apple"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 15,
+    question: "televisor",
+    response: "television",
+    options: ["moon", "computer", "television", "apple"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 16,
+    question: "estantería",
+    response: "bookshelf",
+    options: ["bed", "chair", "window", "bookshelf"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 17,
+    question: "flor",
+    response: "flower",
+    options: ["tree", "door", "lamp", "flower"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 18,
+    question: "llave",
+    response: "key",
+    options: ["cat", "book", "window", "key"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 19,
+    question: "zapatos",
+    response: "shoes",
+    options: ["chair", "bed", "table", "shoes"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 20,
+    question: "perro",
+    response: "dog",
+    options: ["cat", "dog", "bird", "rabbit"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 21,
+    question: "pelota",
+    response: "ball",
+    options: ["table", "door", "ball", "lamp"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 22,
+    question: "plátano",
+    response: "banana",
+    options: ["bird", "stairs", "banana", "clock"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 23,
+    question: "ordenador",
+    response: "computer",
+    options: ["garden", "cup", "television", "computer"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 24,
+    question: "luna",
+    response: "moon",
+    options: ["sun", "coffee", "moon", "apple"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 25,
+    question: "ventilador",
+    response: "fan",
+    options: ["book", "chair", "fan", "window"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 26,
+    question: "mesa",
+    response: "table",
+    options: ["cat", "book", "table", "chair"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 27,
+    question: "avión",
+    response: "airplane",
+    options: ["car", "airplane", "train", "boat"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 28,
+    question: "sol",
+    response: "sun",
+    options: ["moon", "coffee", "sun", "apple"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 29,
+    question: "teléfono",
+    response: "phone",
+    options: ["table", "phone", "computer", "lamp"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 30,
+    question: "ventana",
+    response: "window",
+    options: ["chair", "bed", "window", "table"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 31,
+    question: "libreta",
+    response: "notebook",
+    options: ["bird", "stairs", "notebook", "clock"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 32,
+    question: "café",
+    response: "coffee",
+    options: ["sun", "coffee", "cup", "apple"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 33,
+    question: "lápiz",
+    response: "pencil",
+    options: ["chair", "bed", "pencil", "table"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 34,
+    question: "reloj",
+    response: "clock",
+    options: ["bird", "stairs", "clock", "pen"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 35,
+    question: "manzana",
+    response: "apple",
+    options: ["cup", "car", "apple", "book"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 36,
+    question: "televisión",
+    response: "television",
+    options: ["cat", "book", "window", "television"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+  {
+    id: 37,
+    question: "camisa",
+    response: "shirt",
+    options: ["dog", "bed", "shirt", "house"],
+    answered: false,
+    correct: null,
+    selected: false,
+  },
+];
