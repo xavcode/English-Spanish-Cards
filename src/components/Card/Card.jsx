@@ -8,7 +8,6 @@ const Card = ({ word }) => {
 
   const [isFlipped, setIsFlipped] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null)
-  const [btnDisabled, setBtnDisable] = useState(true)
   const [isCorrect, setIsCorrect] = useState(false)
 
   const incrementScore = useScoreStore((store) => store.incrementScore)
@@ -26,7 +25,7 @@ const Card = ({ word }) => {
         text: 'Selecciona una opcion',
         icon: 'warning',
         confirmButtonText: 'Aceptar',
-        aniation: 'true',
+        animation: 'true',
         toast: 'true',
         // timer: '2500',
         width: '20em',
@@ -43,11 +42,6 @@ const Card = ({ word }) => {
       setIsFlipped(!isFlipped)
     }
   }
-
-  const handleChangeSelectOption = () => {
-    setBtnDisable(false)
-  }
-
 
   return (
     <div className=' transition duration-100 hover:duration-200  hover:brightness-125'>
@@ -71,7 +65,7 @@ const Card = ({ word }) => {
                 <div>
                   <button
                     onClick={handleCheckAnswer}
-                    onChange={handleChangeSelectOption}
+                    // onChange={handleChangeSelectOption}
                     className={`text-white my-2 p-1 cursor-pointer hover:scale-105 rounded-md bg-green-400`} >Revisar</button>
                 </div>
               </div>
@@ -83,7 +77,7 @@ const Card = ({ word }) => {
           <div>
             <p className="text-3xl text-green-400 uppercase text-center font-bold">{word.response}</p>
             {!isCorrect
-              ? <p className={`mt-3 text-center text-xl ${isCorrect ? 'text-green-500/80' : 'text-red-700'}`}>{selectedOption}❌</p>
+              ? <p className={`mt-3 text-center text-xl font-bold ${isCorrect ? 'text-green-500/80' : 'text-red-700'}`}>{startCase(selectedOption)}❌</p>
               : <p className={`mt-3 text-center text-xl ${isCorrect ? 'text-green-500/80' : 'text-red-700'}`}> <span className='text-3xl'>✔</span></p>
             }
           </div>
